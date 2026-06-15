@@ -11,6 +11,7 @@ header {
         padding: 1.5rem 2rem;
     border-bottom: 1px solid #211d0e;
      text-align: center;
+     background-color: rgb(236, 17, 17);
 }
 nav a{
     color:#438494;
