@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ookini | Cafe del barrio</title>
+    <style>
+        /* Paleta de colores y tipografía */
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --matcha-green: #7a9b76;
+            --matcha-hover: #63805f;
+            --ceramic-white: #e8e4d9;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--ceramic-white);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--ceramic-white);
+            text-decoration: none;
+        }
+
+        /* Sección Hero */
+        .hero {
+            text-align: center;
+            padding: 6rem 5%;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 4px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Menú y Especialidades */
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: var(--matcha-green);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 4px;
+            text-align: center;
+            border-top: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .menu-card:hover {
+            border-top: 3px solid var(--matcha-green);
+        }
+
+        .menu-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .price {
+            color: var(--matcha-green);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .walk-in-banner {
+            background: var(--matcha-green);
+            color: var(--bg-dark);
+            text-align: center;
+            padding: 2rem;
+            margin: 4rem 0;
+            border-radius: 4px;
+        }
+
+        /* Formularios de Reserva */
+        .forms-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .form-box {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 4px;
+        }
+
+        .form-box h3 {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--bg-dark);
+            border: 1px solid #333;
+            color: var(--ceramic-white);
+            border-radius: 2px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--matcha-green);
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--matcha-green);
+            color: var(--bg-dark);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: var(--matcha-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid #333;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">OOKINI</a>
+    </header>
+
+    <section class="hero">
+        <h1>Ookini</h1>
+        <p>Un espacio donde la cultura del origen y la precisión convergen. 50 extracciones diarias. Una experiencia de
+            especialidad.</p>
+        <a href="#reservas" class="btn" style="width: auto; padding: 1rem 2rem;">Reservar Experiencia</a>
+    </section>
+
+    <section class="section" id="menu">
+        <h2 class="section-title">Nuestras Especialidades</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>V60</h3>
+                <span class="price">$5 USD</span>
+                <p class="text-muted">Extracción por goteo que resalta la claridad y las notas florales o frutales.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Kyoto Drip</h3>
+                <span class="price">$7 USD</span>
+                <p class="text-muted">Extracción en frío gota a gota. Un proceso lento para un cuerpo licoroso y
+                    profundo.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Siphon</h3>
+                <span class="price">$8 USD</span>
+                <p class="text-muted">Inmersión y vacío térmico. Una taza limpia, caliente y teatral.</p>
+            </div>
+        </div>
+
+        <div class="walk-in-banner">
+            <h3>Prensa Francesa (Walk-in)</h3>
+            <span style="display: block; font-size: 1.2rem; font-weight: bold; margin: 0.5rem 0;">$3 USD</span>
+            <p>Disfruta de nuestro café de especialidad sin reserva. Disponible en todo momento hasta el cierre.</p>
+        </div>
+    </section>
+
+    <section class="section" id="reservas">
+        <h2 class="section-title">Reservaciones</h2>
+        <div class="forms-container">
+
+            <!-- Formulario Especialidad -->
+            <div class="form-box">
+                <h3>Especialidad Diaria</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Cupo limitado a 50 cafés
+                    por día. Máximo 2 tazas por reserva.</p>
+                <form id="form-especialidad">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Método de preferencia</label>
+                        <select required>
+                            <option value="">Selecciona un método</option>
+                            <option value="v60">V60</option>
+                            <option value="kyoto">Kyoto Drip</option>
+                            <option value="siphon">Siphon</option>
+                            <option value="decidir">Decidir en barra</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cantidad (Máx. 2)</label>
+                        <input type="number" min="1" max="2" required>
+                    </div>
+                    <button type="submit" class="btn">Solicitar Reserva</button>
+                </form>
+            </div>
+
+            <!-- Formulario Cata -->
+            <div class="form-box">
+                <h3>Cata Semanal</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Exploración guiada. Cupo
+                    de 8 personas. <strong>$25 USD por persona.</strong></p>
+                <form id="form-cata">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de la cata</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de personas</label>
+                        <input type="number" min="1" max="8" required>
+                    </div>
+                    <button type="submit" class="btn">Reservar Lugar</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Ookini (おおきに) - Gracias.</p>
+    </footer>
+
+    <script>
+        // Lógica básica para manejar las reservas nativas sin recargar la página
+        document.getElementById('form-especialidad').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('¡Gracias por tu reserva en Ookini! Hemos registrado tu solicitud para el café de especialidad. Te esperamos.');
+            this.reset();
+        });
+
+        document.getElementById('form-cata').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('¡Tu lugar en la cata semanal está reservado! Nos emociona compartir esta experiencia contigo.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
